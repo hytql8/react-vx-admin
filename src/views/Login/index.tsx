@@ -1,13 +1,14 @@
 import { Layout, Button, Checkbox, type CheckboxProps } from "antd";
 import classes from "./login.module.scss";
 import { useState, useRef, useEffect } from "react";
+import { ThemeSwitch } from "@/components/ThemeSwitch";
 
 const { Header, Footer, Content } = Layout;
 
 const vxTitle = import.meta.env.VITE_APP_TITLE;
 const logoUrl = new URL("@/assets/imgs/VxLogo.png", import.meta.url).href;
 
-export const Login = () => {
+const Login = () => {
   // username input ref
   const usernameInputRef = useRef<HTMLInputElement>(null);
   // password input ref
@@ -79,7 +80,9 @@ export const Login = () => {
   };
   return (
     <Layout className={classes.layout}>
-      <Header className={classes.header}></Header>
+      <Header className={classes.header}>
+        <ThemeSwitch />
+      </Header>
       <Content className={classes.content}>
         <div className={classes.loginBox}>
           <div className={classes.headerBox}>
@@ -132,7 +135,7 @@ export const Login = () => {
             <div className={classes.inputTips}>{passwordTips}</div>
             <div className={classes.rememberBox}>
               <Checkbox checked={checked} onChange={onChange}>
-                记住密码
+                <span className={classes.text}>记住密码</span>
               </Checkbox>
             </div>
             <div className={classes.submitBox}>
@@ -152,3 +155,5 @@ export const Login = () => {
     </Layout>
   );
 };
+
+export default Login;
