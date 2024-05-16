@@ -26,6 +26,9 @@ dependencies:
   react-redux:
     specifier: ^9.1.1
     version: 9.1.1(@types/react@18.2.65)(react@18.2.0)(redux@5.0.1)
+  react-router:
+    specifier: ^6.23.1
+    version: 6.23.1(react@18.2.0)
   react-router-dom:
     specifier: ^6.23.0
     version: 6.23.0(react-dom@18.2.0)(react@18.2.0)
@@ -808,6 +811,11 @@ packages:
 
   /@remix-run/router@1.16.0:
     resolution: {integrity: sha512-Quz1KOffeEf/zwkCBM3kBtH4ZoZ+pT3xIXBG4PPW/XFtDP7EGhtTiC2+gpL9GnR7+Qdet5Oa6cYSvwKYg6kN9Q==, tarball: https://registry.npmmirror.com/@remix-run/router/-/router-1.16.0.tgz}
+    engines: {node: '>=14.0.0'}
+    dev: false
+
+  /@remix-run/router@1.16.1:
+    resolution: {integrity: sha512-es2g3dq6Nb07iFxGk5GuHN20RwBZOsuDQN7izWIisUcv9r+d2C5jQxqmgkdebXgReWfiyUabcki6Fg77mSNrig==, tarball: https://registry.npmmirror.com/@remix-run/router/-/router-1.16.1.tgz}
     engines: {node: '>=14.0.0'}
     dev: false
 
@@ -2682,6 +2690,16 @@ packages:
       react: '>=16.8'
     dependencies:
       '@remix-run/router': 1.16.0
+      react: 18.2.0
+    dev: false
+
+  /react-router@6.23.1(react@18.2.0):
+    resolution: {integrity: sha512-fzcOaRF69uvqbbM7OhvQyBTFDVrrGlsFdS3AL+1KfIBtGETibHzi3FkoTRyiDJnWNc2VxrfvR+657ROHjaNjqQ==, tarball: https://registry.npmmirror.com/react-router/-/react-router-6.23.1.tgz}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      react: '>=16.8'
+    dependencies:
+      '@remix-run/router': 1.16.1
       react: 18.2.0
     dev: false
 

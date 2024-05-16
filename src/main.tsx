@@ -1,13 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "@/styles/index.scss";
-import { ConfigProvider } from "antd";
-import { App } from "../src/router";
+import App from "./App";
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+const root = ReactDOM.createRoot(document.getElementById("root")!);
+root.render(
   <React.StrictMode>
-    <ConfigProvider theme={{ cssVar: true }}>
-      <App />
-    </ConfigProvider>
+    <App />
   </React.StrictMode>
 );

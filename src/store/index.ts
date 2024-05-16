@@ -1,11 +1,13 @@
 import collapsedSlice from "@/store/modules/collapsed.ts";
 import userReducer from "@/store/modules/user.ts";
+import useAppStore from "@/store/modules/appStore.ts";
 import { configureStore } from "@reduxjs/toolkit";
 
 const store = configureStore({
   reducer: {
     user: userReducer,
     collapsed: collapsedSlice,
+    appStore: useAppStore,
   },
 });
 
