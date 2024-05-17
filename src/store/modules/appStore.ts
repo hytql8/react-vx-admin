@@ -10,7 +10,7 @@ interface ActionType {
 }
 
 const initialState: AppState = {
-  themeMode: false,
+  themeMode: true,
   // 初始化其他属性的默认值...
 };
 

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import React from "react";
 import { SunFilled, MoonFilled } from "@ant-design/icons";
-import { Switch } from "antd";
+import { Switch, Flex } from "antd";
 import classes from "./ThemeSwitch.module.scss";
 import { useSelector, useDispatch } from "react-redux";
 import type { RootState, AppDispatch } from "@/store";
@@ -63,7 +63,7 @@ export const ThemeSwitch: React.FC = () => {
     setTheme(checked);
   };
   return (
-    <div>
+    <Flex align="center">
       <Switch
         className={classes.switchStyle}
         checkedChildren={<SunFilled className={classes.sunIcon} />}
@@ -71,6 +71,6 @@ export const ThemeSwitch: React.FC = () => {
         defaultChecked={theme}
         onChange={toggle}
       />
-    </div>
+    </Flex>
   );
 };
